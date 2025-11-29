@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PUP KIOSK</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- TOP BAR -->
+    <header class="top-bar">
+      <div class="top-left">
+        <img src="imageS/PUPLogo.png" alt="PUP Logo" class="logo-dot">
+        <div class="title-block">
+          <h1>PUP Campus Kiosk</h1>
+          <span>Interactive wayfinding map</span>
+        </div>
+      </div>
+      <div class="top-right">
+        <div class="pill">Hover hotspots</div>
+        <div class="pill primary">Explore campus</div>
+      </div>
+    </header>
+    <div id="map-container">
+      <img src="pup-map.jpg" alt="PUP Campus Map" usemap="#pup-map" />
+
+      <!-- Modal windows for each location -->
+      <div id="modal-pylons" class="modal">
+        <img src="/images/pylons.jpg" alt="PUP Pylons" />
+        <h3>The Pylon</h3>
+        <p>The iconic entrance of the Polytechnic University of the Philippines.</p>
+      </div>
+      <div id="modal-murals" class="modal">
+        <img src="/images/murals.jpg" alt="PUP Murals" />
+        <h3>The Mural</h3>
+        <p>Colorful murals depicting the history and culture of PUP.</p>
+      </div>
+      <div id="modal-visitorlounge" class="modal">
+        <img src="visitorlounge.jpg" alt="Visitor's Lounge" />
+        <h3>Visitor's Lounge</h3>
+        <p>A comfortable area for visitors to relax and wait.</p>
+      </div>
+      <div id="modal-opencourt" class="modal">
+        <img src="opencourt.jpg" alt="Open Court" />
+        <h3>Open Court</h3>
+        <p>A popular gathering spot for students and events.</p>
+      </div>
+      <div id="modal-tenniscourt" class="modal">
+        <img src="/images/tenniscourt.jpg" alt="Tennis Court" />
+        <h3>Lawn Tennis Court</h3>
+        <p>Facilities for tennis and other recreational activities.</p>
+      </div>
+      <div id="modal-basketballcourt" class="modal">
+        <img src="basketballcourt.jpg" alt="Basketball Court" />
+        <h3>Basketball Court</h3>
+        <p>A venue for basketball games and sports events.</p>
+      </div>
+      <div id="modal-souvenirshop" class="modal">
+        <img src="/images/souvenirshop.jpg" alt="Souvenir Shop" />
+        <h3>Souvenir Shop</h3>
+        <p>A place to buy PUP merchandise and memorabilia.</p>
+      </div>
+      <div id="modal-mabinishrine" class="modal">
+        <img src="/images/mabinishrine.jpg" alt="Mabini Shrine" />
+        <h3>Mabini Shrine</h3>
+        <p>A historical site dedicated to Apolinario Mabini, a Filipino revolutionary leader.</p>
+      </div>
+      <div id="modal-mabinimuseum" class="modal">
+        <img src="/images/mabinimuseum.jpg" alt="Mabini Museum" />
+        <h3>Mabini Museum</h3>
+        <p>A museum showcasing the life and works of Apolinario Mabini.</p>
+      </div>
+      <div id="modal-obelisk" class="modal">
+        <img src="/images/obelisk.jpg" alt="Obelisk" />
+        <h3>Obelisk</h3>
+        <p>A monument symbolizing the university's heritage and values.</p>
+      </div>
+      <div id="modal-freedompark" class="modal">
+        <img src="/images/freedompark.jpg" alt="Freedom Park" />
+        <h3>Freedom Park</h3>
+        <p>A green space for relaxation and outdoor activities.</p>
+      </div>
+      <div id="modal-fountainpark" class="modal">
+        <img src="/images/fountainpark.jpg" alt="Fountain Park" />
+        <h3>Fountain Park</h3>
+        <p>A scenic area featuring a beautiful fountain and seating areas.</p>
+      </div>
+      <div id="modal-chapel" class="modal">
+        <img src="/images/chapel.jpg" alt="University Chapel" />
+        <h3>Inter-Faith Chapel</h3>
+        <p>A place for spiritual reflection and worship.</p>
+      </div>
+      <div id="modal-mainbuilding" class="modal">
+        <img src="/images/mainbuilding.jpg" alt="Main Building" />
+        <h3>Main Academic Building</h3>
+        <p>The central academic building housing classrooms and offices.</p>
+      </div>
+      <div id="modal-gazebo" class="modal">
+        <img src="/images/gazebo.jpg" alt="Gazebo" />
+        <h3>Gazebo</h3>
+        <p>A charming spot for relaxation and social gatherings.</p>
+      </div>
+      <div id="modal-grandstand" class="modal">
+        <img src="/images/grandstand.jpg" alt="Grandstand" />
+        <h3>The Grandstand</h3>
+        <p>Seating area for spectators during sports events and ceremonies.</p>
+      </div>
+      <div id="modal-pupoval" class="modal">
+        <img src="/images/oval.jpg" alt="Oval" />
+        <h3>The Oval</h3>
+        <p>A large open field for various outdoor activities and events.</p>
+      </div>
+      <div id="modal-tahananngatleta" class="modal">
+        <img src="/images/tahananngatleta.jpg" alt="Tahanan ng Atleta" />
+        <h3>Tahanan ng Atleta</h3>
+        <p>A residence for student-athletes participating in university sports.</p>
+      </div>
+      <div id="modal-gabrielasilangbuilding" class="modal">
+        <img src="/images/gabrielasilangbuilding.jpg" alt="Gabriela Silang Building" />
+        <h3>Gabriela Silang Building</h3>
+        <p>Academic building named after the Filipino revolutionary leader Gabriela Silang.</p>
+      </div>
+      <div id="modal-foodandnutrition" class="modal">
+        <img src="/images/foodandnutrition.jpg" alt="Food and Nutrition Building" />
+        <h3>Food and Nutrition Building</h3>
+        <p>Facility dedicated to the study of food science and nutrition.</p>
+      </div>
+      <div id="modal-famo" class="modal">
+        <img src="/images/famo.jpg" alt="FAMO Building" />
+        <h3>FAMO Building</h3>
+        <p>Facilty Management Office.</p>
+      </div>
+      <div id="modal-sampaguitabldg" class="modal">
+        <img src="/images/sampaguitabldg.jpg" alt="Sampaguita Building" />
+        <h3>Sampaguita Building</h3>
+        <p>Academic building named after the national flower of the Philippines.</p>
+      </div>
+      <div id="modal-studentcenter" class="modal">
+        <img src="/images/studentcenter.jpg" alt="Student Center" />
+        <h3>Student Center</h3>
+        <p>A hub for student activities, organizations, and services.</p>
+      </div>
+      <div id="modal-charlie" class="modal">
+        <img src="/images/charlie.jpg" alt="Charlie" />
+        <h3>Charlie del Rosario Building</h3>
+        <p>A popular hangout spot for students to relax and socialize.</p>
+      </div>
+      <div id="modal-linear" class="modal">
+        <img src="/images/linear.jpg" alt="Linear" />
+        <h3>Linear Park</h3>
+        <p>A scenic walkway lined with trees and benches for relaxation.</p>
+      </div>
+      <div id="modal-labhighbldg" class="modal">
+        <img src="/images/labhighbldg.jpg" alt="Laboratory High School Building" />
+        <h3>Laboratory High School Building</h3>
+        <p>Facility for the university's laboratory high school program.</p>
+      </div>
+      <div id="modal-printingpress" class="modal">
+        <img src="/images/printingpress.jpg" alt="Printing Press" />
+        <h3>Printing Press Building</h3>
+        <p>The university's printing facility for academic and administrative needs.</p>
+      </div>
+      <div id="modal-propertysuppplymanagementoffice" class="modal">
+        <img src="/images/psmo.jpg" alt="Property & Supply Management Office" />
+        <h3>Property Supply Management Office</h3>
+        <p>Office responsible for managing university properties and supplies.</p>
+      </div>
+      <div id="modal-watertower" class="modal">
+        <img src="/images/watertower.jpg" alt="Water Tower" />
+        <h3>Water Tower</h3>
+        <p>A landmark structure providing water supply to the campus.</p>
+      </div>
+      <div id="modal-library" class="modal">
+        <img src="/images/library.jpeg" alt="Main Library" />
+        <h3>Ninoy Aquino Library and Learning Resources Center</h3>
+        <p>The central hub for academic resources and study areas.</p>
+      </div>
+      <div id="modal-lagoon" class="modal">
+        <img src="/images/lagoon.jpg" alt="Lagoon" />
+        <h3>Lagoon</h3>
+        <p>A serene water feature enhancing the campus landscape.</p>
+      </div>
+      <div id="modal-amphitheater" class="modal">
+        <img src="/images/amphitheater.jpg" alt="Amphitheater" />
+        <h3>Amphitheater</h3>
+        <p>An open-air venue for performances and events.</p>
+      </div>
+      <div id="modal-nutri&foodtech" class="modal">
+        <img src="/images/nutri&foodtech.jpg" alt="Nutrition and Food Technology Building" />
+        <h3>Nutrition and Food Technology Building</h3>
+        <p>Facility for the study and research of nutrition and food technology.</p>
+      </div>
+      <div id="modal-chk" class="modal">
+        <img src="/images/chk.jpg" alt="College of Human Kinetics Building" />
+        <h3>College of Human Kinetics Building</h3>
+        <p>Facility for the study of physical education, sports science, and health.</p>
+      </div>
+      <div id="modal-tahananngalumni" class="modal">
+        <img src="/images/tahananngalumni.jpg" alt="Tahanan ng Alumni" />
+        <h3>Tahanan ng Alumni</h3>
+        <p>A residence for university alumni visiting the campus.</p>
+      </div>
+      <div id="modal-swimmingpool" class="modal">
+        <img src="/images/swimmingpool.jpg" alt="Swimming Pool" />
+        <h3>Swimming Pool</h3>
+        <p>Facility for swimming training and aquatic sports.</p>
+      </div>
+      <div id="modal-gym" class="modal">
+        <img src="/images/gymnasium.jpg" alt="Gymnasium" />
+        <h3>Gymnasium</h3>
+        <p>Facilities for sports, events, and physical training.</p>
+      </div>
+      <div id="modal-engsci" class="modal">
+        <img src="/images/engsci.jpeg" alt="Engineering & Science Research Center" />
+        <h3>Engineering Science Building</h3>
+        <p>Home to the College of Engineering and Technology.</p>
+      </div>
+      <div id="modal-coc" class="modal">
+        <img src="/images/coc.jpeg" alt="cocbldg" />
+        <h3>College of Communication Building</h3>
+        <p>Facility for the study of communication arts and media.</p>
+      </div>
+      <div id="modal-puptheater" class="modal">
+        <img src="/images/puptheater.jpg" alt="puptheater" />
+        <h3>PUP Theater</h3>
+        <p>A venue for theatrical performances and cultural events.</p>
+      </div>
+      <div id="modal-cea" class="modal">
+        <img src="/images/cea.jpg" alt="cea" />
+        <h3>Engineering & Architechture Building</h3>
+        <p>Home to the College of Engineering and Architechture.</p>
+      </div>
+      <div id="modal-condotel" class="modal">
+        <img src="/images/condotel.jpg" alt="PUP Condotel" />
+        <h3>Condotel</h3>
+        <p>A mixed-use building offering accommodation and commercial spaces.</p>
+      </div>
+      <div id="modal-ndc1" class="modal">
+        <img src="/images/ndc1.jpg" alt="NDC Tennis Court & Club House" />
+        <h3>NDC Tennis Court & Club House</h3>
+        <p>A recreational facility for tennis and social gatherings.</p>
+      </div>
+      <div id="modal-ndc2" class="modal">
+        <img src="images/ndc2.jpg" alt="NDC Court">
+        <h3>NDC Court</h3>
+        <p>A multi-purpose court for various sports and activities.</p>
+      </div>
+      <div id="modal-bpo" class="modal">
+        <img src="/images/bpo.jpg" alt="BPO Building" />
+        <h3>Business Processing Office Building</h3>
+        <p>A facility dedicated to business process outsourcing operations.</p>
+      </div>
+      <div id="modal-itech" class="modal">
+        <img src="/images/itech.jpg" alt="iTech Building" />
+        <h3>Information Technology Building</h3>
+        <p>A center for information technology education and research.</p>
+      </div>
+      <div id="modal-antique" class="modal">
+        <img src="/images/antique.jpg" alt="Antique House" />
+        <h3>Antique House</h3>
+        <p>A historical building showcasing antique collections and artifacts.</p>
+      </div>
+      <div id="modal-graduate" class="modal">
+        <img src="/images/graduate.jpg" alt="Graduate School Building" />
+        <h3>Graduate School</h3>
+        <p>Facility for postgraduate education and research.</p>
+      </div>
+      <div id="modal-hasmin" class="modal">
+        <img src="/images/hasmin.jpg" alt="Hasmin Building" />
+        <h3>Hasmin Building</h3>
+        <p>A dormitory providing accommodation for students.</p>
+      </div>
+
+      <!-- HOVER HINT -->
+      <div class="hint">
+        <span class="hint-dot"></span>
+        <span>Move cursor over numbered spots to view details</span>
+      </div>
+
+      <!-- FOOTER -->
+      <footer class="footer-bar">
+        Polytechnic University of the Philippines • Interactive Campus Directory
+      </footer>
+      <map name="pup-map">
+        <area shape="circle" coords="735,390,15" data-orig-coords="735,390,15" alt="PUP Pylons" data-id="pylons" onmouseover="showModal('pylons', event)" onmouseout="hideModal('pylons')" />
+        <area shape="circle" coords="692,404,15" data-orig-coords="692,404,15" alt="PUP Murals" data-id="murals" onmouseover="showModal('murals', event)" onmouseout="hideModal('murals')" />
+        <area shape="circle" coords="700,360,15" data-orig-coords="700,360,15" alt="Visitor's Lounge" data-id="visitorlounge" onmousemove="showModal('visitorlounge', event)" onmouseout="hideModal('visitorlounge')" />
+        <area shape="circle" coords="732,346,15" data-orig-coords="732,346,15" alt="Open Court" data-id="opencourt" onmouseover="showModal('opencourt', event)" onmouseout="hideModal('opencourt')" />
+        <area shape="circle" coords="670,315,15" data-orig-coords="670,315,15" alt="Lawn Tennis Court" data-id="tenniscourt" onmouseover="showModal('tenniscourt', event)" onmouseout="hideModal('tenniscourt')" />
+        <area shape="circle" coords="615,280,15" data-orig-coords="615,280,15" alt="Basketball Court" data-id="basketballcourt" onmouseover="showModal('basketballcourt', event)" onmouseout="hideModal('basketballcourt')" />
+        <area shape="circle" coords="540,320,15" data-orig-coords="540,320,15" alt="Souvenir Shop" data-id="souvenirshop" onmouseover="showModal('souvenirshop', event)" onmouseout="hideModal('souvenirshop')" />
+        <area shape="circle" coords="480,290,15" data-orig-coords="480,290,15" alt="Mabini Shrine" data-id="mabinishrine" onmouseover="showModal('mabinishrine', event)" onmouseout="hideModal('mabinishrine')" />
+        <area shape="circle" coords="435,290,15" data-orig-coords="435,290,15" alt="Mabini Museum" data-id="mabinimuseum" onmouseover="showModal('mabinimuseum', event)" onmouseout="hideModal('mabinimuseum')" />
+        <area shape="circle" coords="505,262,15" data-orig-coords="505,262,15" alt="Obelisk" data-id="obelisk" onmouseover="showModal('obelisk', event)" onmouseout="hideModal('obelisk')" />
+        <area shape="circle" coords="400,280,15" data-orig-coords="400,280,15" alt="Freedom Park" data-id="freedompark" onmouseover="showModal('freedompark', event)" onmouseout="hideModal('freedompark')" />
+        <area shape="circle" coords="333,300,15" data-orig-coords="333,300,15" alt="Fountain Park" data-id="fountainpark" onmouseover="showModal('fountainpark', event)" onmouseout="hideModal('fountainpark')" />
+        <area shape="circle" coords="220,305,15" data-orig-coords="220,305,15" alt="University Chapel" data-id="chapel" onmouseover="showModal('chapel', event)" onmouseout="hideModal('chapel')" />
+        <area shape="poly" coords="368,269,363,229,283,211,289,201,286,177,239,175,221,190,183,180,85,210,81,223,75,231,74,260,94,281,95,282,200,262,252,268,302,274,320,280,340,280" data-orig-coords="368,269,363,229,283,211,289,201,286,177,239,175,221,190,183,180,85,210,81,223,75,231,74,260,94,281,95,282,200,262,252,268,302,274,320,280,340,280" alt="Main Academic Building" data-id="mainbuilding" onmouseover="showModal('mainbuilding', event)" onmouseout="hideModal('mainbuilding')" />
+        <area shape="circle" coords="321,328,15" data-orig-coords="321,328,15" alt="Gazebo" data-id="gazebo" onmouseover="showModal('gazebo', event)" onmouseout="hideModal('gazebo')" />
+        <area shape="circle" coords="412,324,15" data-orig-coords="412,324,15" alt="Grandstand" data-id="grandstand" onmouseover="showModal('grandstand', event)" onmouseout="hideModal('grandstand')" />
+        <area shape="poly" coords="535,355,279,338,212,353,180,372,164,383,158,407,166,420,199,437,245,444,285,445,383,449,528,449,562,449,595,418,598,407,599,396,599,387,589,379" data-orig-coords="535,355,279,338,212,353,180,372,164,383,158,407,166,420,199,437,245,444,285,445,383,449,528,449,562,449,595,418,598,407,599,396,599,387,589,379" alt="The Oval" data-id="pupoval" onmouseover="showModal('pupoval', event)" onmouseout="hideModal('pupoval')" />
+        <area shape="circle" coords="362,460,15" data-orig-coords="362,460,15" alt="Tahanan ng Atleta" data-id="tahananngatleta" onmouseover="showModal('tahananngatleta', event)" onmouseout="hideModal('tahananngatleta')" />
+        <area shape="circle" coords="286,471,15" data-orig-coords="286,471,15" alt="Gabriela Silang Building" data-id="gabrielasilangbuilding" onmouseover="showModal('gabrielasilangbuilding', event)" onmouseout="hideModal('gabrielasilangbuilding')" />
+        <area shape="poly" coords="56,279,81,274,107,315,85,326" data-orig-coords="56,279,81,274,107,315,85,326" alt="Food and Nutrition Building" data-id="foodandnutrition" onmouseover="showModal('foodandnutrition', event)" onmouseout="hideModal('foodandnutrition')" />
+        <area shape="poly" coords="42,248,55,244,64,255,48,261" data-orig-coords="42,248,55,244,64,255,48,261" alt="FAMO Building" data-id="famo" onmouseover="showModal('famo', event)" onmouseout="hideModal('famo')" />
+        <area shape="circle" coords="288,174,17" data-orig-coords="288,174,17" alt="Sampaguita Building" data-id="sampaguitabldg" onmouseover="showModal('sampaguitabldg', event)" onmouseout="hideModal('sampaguitabldg')" />
+        <area shape="circle" coords="316,191,15" data-orig-coords="316,191,15" alt="Student Center" data-id="studentcenter" onmouseover="showModal('studentcenter', event)" onmouseout="hideModal('studentcenter')" />
+        <area shape="poly" coords="344,159,391,165,381,191,335,191" data-orig-coords="344,159,391,165,381,191,335,191" alt="Charlie del Rosario Building" data-id="charlie" onmouseover="showModal('charlie', event)" onmouseout="hideModal('charlie')" />
+        <area shape="poly" coords="316,172,393,148,387,127,274,151" data-orig-coords="316,172,393,148,387,127,274,151" alt="Linear Park" data-id="linear" onmouseover="showModal('linear', event)" onmouseout="hideModal('linear')" />
+        <area shape="poly" coords="399,132,395,143,395,164,473,158,473,129" data-orig-coords="399,132,395,143,395,164,473,158,473,129" alt="Laboratory High School Building" data-id="labhighbldg" onmouseover="showModal('labhighbldg', event)" onmouseout="hideModal('labhighbldg')" />
+        <area shape="circle" coords="447,119,9" data-orig-coords="447,119,9" alt="Printing Press Building" data-id="printingpress" onmouseover="showModal('printingpress', event)" onmouseout="hideModal('printingpress')" />
+        <area shape="circle" coords="485,133,8" data-orig-coords="485,133,8" alt="Property Supply Management Office" data-id="propertysuppplymanagementoffice" onmouseover="showModal('propertysuppplymanagementoffice', event)" onmouseout="hideModal('propertysuppplymanagementoffice')" />
+        <area shape="circle" coords="500,147,10" data-orig-coords="500,147,10" alt="Water Tower" data-id="watertower" onmouseover="showModal('watertower', event)" onmouseout="hideModal('watertower')" />
+        <area shape="poly" coords="408,215,409,186,523,155,552,161,551,173,562,179,564,208,542,213,486,204,440,220" data-orig-coords="408,215,409,186,523,155,552,161,551,173,562,179,564,208,542,213,486,204,440,220" alt="Main Library" data-id="library" onmouseover="showModal('library', event)" onmouseout="hideModal('library')" />
+        <area shape="poly" coords="512,238,461,244,412,248,366,239,368,223,362,205,385,205,404,206,407,217,425,223,440,223,462,215,469,209,477,209,498,209,506,212,507,223" data-orig-coords="512,238,461,244,412,248,366,239,368,223,362,205,385,205,404,206,407,217,425,223,440,223,462,215,469,209,477,209,498,209,506,212,507,223" alt="Lagoon" data-id="lagoon" onmouseover="showModal('lagoon', event)" onmouseout="hideModal('lagoon')" />
+        <area shape="poly" coords="338,213,356,208,359,213,357,220,349,220" data-orig-coords="338,213,356,208,359,213,357,220,349,220" alt="Amphitheater" data-id="amphitheater" onmouseover="showModal('amphitheater', event)" onmouseout="hideModal('amphitheater')" />
+        <area shape="rect" coords="563,173,609,206" data-orig-coords="563,173,609,206" alt="Nutrition and Food Technology Building" data-id="nutri&foodtech" onmouseover="showModal('nutri&foodtech', event)" onmouseout="hideModal('nutri&foodtech')" />
+        <area shape="poly" coords="527,218,527,225,542,232,551,233,590,227,589,216,601,210,625,206,642,204,629,198" data-orig-coords="527,218,527,225,542,232,551,233,590,227,589,216,601,210,625,206,642,204,629,198" alt="College of Human Kinetics Building" data-id="chk" onmouseover="showModal('chk', event)" onmouseout="hideModal('chk')" />
+        <area shape="poly" coords="589,227,591,213,626,206,635,211,639,222,617,230,597,232" data-orig-coords="589,227,591,213,626,206,635,211,639,222,617,230,597,232" alt="Tahanan ng Alumni" data-id="tahananngalumni" onmouseover="showModal('tahananngalumni', event)" onmouseout="hideModal('tahananngalumni')" />
+        <area shape="poly" coords="649,231,600,237,657,266,670,261,670,254,682,246" data-orig-coords="649,231,600,237,657,266,670,261,670,254,682,246" alt="Swimming Pool" data-id="swimmingpool" onmouseover="showModal('swimmingpool', event)" onmouseout="hideModal('swimmingpool')" />
+        <area shape="poly" coords="735,234,671,255,776,305,840,278" data-orig-coords="735,234,671,255,776,305,840,278" alt="Gymnasium" data-id="gym" onmouseover="showModal('gym', event)" onmouseout="hideModal('gym')" />
+        <area shape="poly" coords="784,295,844,279,861,275,872,281,875,289,878,296,877,332,812,346,780,333" data-orig-coords="784,295,844,279,861,275,872,281,875,289,878,296,877,332,812,346,780,333" alt="Engineering Science Building" data-id="engsci" onmouseover="showModal('engsci', event)" onmouseout="hideModal('engsci')" />
+        <area shape="circle" coords="699,98,8" data-orig-coords="699,98,8" alt="College of Communication Building" data-id="coc" onmouseover="showModal('coc', event)" onmouseout="hideModal('coc')" />
+        <area shape="circle" coords="707,80,8" data-orig-coords="707,80,8" alt="PUP Theater" data-id="puptheater" onmouseover="showModal('puptheater', event)" onmouseout="hideModal('puptheater')" />
+        <area shape="circle" coords="741,77,7" data-orig-coords="741,77,7" alt="Engineering & Architechture Building" data-id="cea" onmouseover="showModal('cea', event)" onmouseout="hideModal('cea')" />
+        <area shape="circle" coords="648,41,10" data-orig-coords="648,41,10" alt="Condotel" data-id="condotel" onmouseover="showModal('condotel', event)" onmouseout="hideModal('condotel')" />
+        <area shape="circle" coords="779,85,7" data-orig-coords="779,85,7" alt="NDC Tennis Court &amp; Club House" data-id="ndc1" onmouseover="showModal('ndc1', event)" onmouseout="hideModal('ndc1')" />
+        <area shape="circle" coords="778,65,8" data-orig-coords="778,65,8" alt="NDC Court" data-id="ndc2" onmouseover="showModal('ndc2', event)" onmouseout="hideModal('ndc2')" />
+        <area shape="circle" coords="827,69,8" data-orig-coords="827,69,8" alt="Business Processing Office Building" data-id="bpo" onmouseover="showModal('bpo', event)" onmouseout="hideModal('bpo')" />
+        <area shape="circle" coords="829,39,8" data-orig-coords="829,39,8" alt="Information Technology Building" data-id="itech" onmouseover="showModal('itech', event)" onmouseout="hideModal('itech')" />
+        <area shape="circle" coords="772,46,8" data-orig-coords="772,46,8" alt="Antique House" data-id="antique" onmouseover="showModal('antique', event)" onmouseout="hideModal('antique')" />
+        <area shape="rect" coords="878,9,895,24" data-orig-coords="878,9,895,24" alt="Graduate School Building" data-id="graduate" onmouseover="showModal('graduate', event)" onmouseout="hideModal('graduate')" />
+        <area shape="circle" coords="939,30,9" data-orig-coords="939,30,9" alt="Hasmin Building" data-id="hasmin" onmouseover="showModal('hasmin', event)" onmouseout="hideModal('hasmin')" />
+      </map>
+      <script src="script.js"></script>
+  </body>
+</html>
